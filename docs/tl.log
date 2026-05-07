@@ -1,0 +1,34 @@
+02:50:27 <INFO> Started REINVENT 4.7.15 (C) AstraZeneca 2017, 2023 on 2026-04-30
+02:50:27 <INFO> Command line: /cluster/raid/home/student9/miniconda3/envs/reinvent4/bin/reinvent -l tl.log example_cfgs/tl/reinvent.toml
+02:50:27 <INFO> Reading run configuration from /cluster/raid/home/student9/REINVENT-tutorial-2/docs/example_cfgs/tl/reinvent.toml using format toml
+02:50:27 <INFO> User student9 on host lcmdlc4
+02:50:27 <INFO> Python version 3.10.20
+02:50:27 <INFO> PyTorch version 2.9.1+cpu, git 5811a8d7da873dd699ff6687092c225caffcf1bb
+02:50:27 <INFO> PyTorch compiled with CUDA version None
+02:50:27 <INFO> RDKit version 2026.03.1
+02:50:27 <INFO> Platform Linux-5.14.0-570.49.1.el9_6.x86_64-x86_64-with-glibc2.34
+02:50:27 <INFO> CUDA driver version 580.82.07
+02:50:27 <INFO> Number of PyTorch CUDA devices 0
+02:50:27 <WARN> 'use_cuda' is deprecated, use 'device' instead
+02:50:27 <INFO> Using CPU x86_64
+02:50:27 <INFO> Writing TensorBoard summary to /cluster/raid/home/student9/REINVENT-tutorial-2/docs/tb_TL_reinvent
+02:50:27 <INFO> Starting Transfer Learning
+02:50:27 <INFO> /cluster/raid/home/student9/REINVENT-tutorial-2/docs/prior/reinvent.prior has valid hash:
+{ 'comments': [],
+  'creation_date': 0,
+  'date_format': 'UNIX epoch',
+  'hash_id': '173568c36e1fc3d95cab289c7d31ce0b',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.4.1',
+  'model_id': '55d68f8a81c04f5a86304ebe1723a0ea',
+  'model_id_format': 'uuid.uuid4 3.10.12',
+  'origina_data_source': 'ChEMBL 25',
+  'updates': []}
+02:50:27 <INFO> Number of network parameters: 5,805,602
+02:50:27 <INFO> Network architecture:
+RNN(
+  (_embedding): Embedding(34, 256)
+  (_rnn): LSTM(256, 512, num_layers=3, batch_first=True)
+  (_linear): Linear(in_features=512, out_features=34, bias=True)
+)
+02:50:27 <INFO> Using generator Reinvent
+02:50:27 <INFO> Applying filter default to input SMILES

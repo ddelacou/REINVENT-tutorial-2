@@ -1,0 +1,103 @@
+03:06:02 <INFO> Started REINVENT 4.7.15 (C) AstraZeneca 2017, 2023 on 2026-04-30
+03:06:02 <INFO> Command line: /cluster/raid/home/student9/miniconda3/envs/reinvent4/bin/reinvent -l tl_nhc.log example_cfgs/tl/mol2mol.toml
+03:06:02 <INFO> Reading run configuration from /cluster/raid/home/student9/REINVENT-tutorial-2/docs/example_cfgs/tl/mol2mol.toml using format toml
+03:06:02 <INFO> User student9 on host lcmdlc4
+03:06:02 <INFO> Python version 3.10.20
+03:06:02 <INFO> PyTorch version 2.9.1+cpu, git 5811a8d7da873dd699ff6687092c225caffcf1bb
+03:06:02 <INFO> PyTorch compiled with CUDA version None
+03:06:02 <INFO> RDKit version 2026.03.1
+03:06:02 <INFO> Platform Linux-5.14.0-570.49.1.el9_6.x86_64-x86_64-with-glibc2.34
+03:06:03 <INFO> CUDA driver version 580.82.07
+03:06:03 <INFO> Number of PyTorch CUDA devices 0
+03:06:03 <WARN> 'use_cuda' is deprecated, use 'device' instead
+03:06:03 <INFO> Using CPU x86_64
+03:06:03 <INFO> Writing TensorBoard summary to /cluster/raid/home/student9/REINVENT-tutorial-2/docs/tb_TL_mol2mol
+03:06:03 <INFO> Starting Transfer Learning
+03:06:03 <ERRO> /cluster/raid/home/student9/REINVENT-tutorial-2/docs/prior/mol2mol_medium_similarity.prior has invalid hash:
+{ 'comments': [],
+  'creation_date': 0,
+  'date_format': 'UNIX epoch',
+  'hash_id': 'b67da12a3b4abf1ea4f6d24c0ac58d50',
+  'hash_id_format': 'xxhash.xxh3_128_hex 3.4.1',
+  'model_id': '0c2799f6b12342b3a31b97c755f8f13a',
+  'model_id_format': 'uuid.uuid4 3.10.12',
+  'origina_data_source': 'ChEMBL 28',
+  'updates': []}
+03:06:03 <INFO> Number of network parameters: 17,462,400
+03:06:03 <INFO> Network architecture:
+EncoderDecoder(
+  (encoder): Encoder(
+    (layers): ModuleList(
+      (0-5): 6 x EncoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (sublayer): ModuleList(
+          (0-1): 2 x SublayerConnection(
+            (norm): LayerNorm()
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm()
+  )
+  (decoder): Decoder(
+    (layers): ModuleList(
+      (0-5): 6 x DecoderLayer(
+        (self_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (src_attn): MultiHeadedAttention(
+          (linears): ModuleList(
+            (0-3): 4 x Linear(in_features=256, out_features=256, bias=True)
+          )
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (feed_forward): PositionwiseFeedForward(
+          (w_1): Linear(in_features=256, out_features=2048, bias=True)
+          (w_2): Linear(in_features=2048, out_features=256, bias=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (sublayer): ModuleList(
+          (0-2): 3 x SublayerConnection(
+            (norm): LayerNorm()
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (norm): LayerNorm()
+  )
+  (src_embed): Sequential(
+    (0): Embeddings(
+      (lut): Embedding(128, 256)
+    )
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (tgt_embed): Sequential(
+    (0): Embeddings(
+      (lut): Embedding(128, 256)
+    )
+    (1): PositionalEncoding(
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+  )
+  (generator): Generator(
+    (proj): Linear(in_features=256, out_features=128, bias=True)
+  )
+)
+03:06:03 <INFO> Using generator Mol2Mol
